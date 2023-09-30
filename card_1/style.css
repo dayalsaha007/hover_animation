@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+} 
+
+img{
+    height: 500px;
+    width: 100%;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 5px;
+    transition:.5s;
+}
+section{
+    padding: 70px 12% 70px;
+}
+
+
+.card-parent{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; 
+}
+
+.card{
+    overflow: hidden;
+    position: relative;
+}
+
+.intro{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27, 27, 27, .5);
+    color: white;
+    overflow: hidden;
+    bottom: 0px;
+    transition:.5s;
+}
+
+.intro h2{
+margin: 10px;
+font-size: 40px;
+}
+
+.intro p{
+    margin: 20px;
+    font-size: 17px;
+    line-height: 23px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card span{
+    font-weight: bold;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .intro {
+    height: 250px;   
+    bottom: 0px;
+    background: rgb(27, 27, 27, .5);
+}
+
+.card:hover p{
+    visibility: visible;
+    opacity: 1;
+}
+
+.card:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
+
+@media (max-width:1050px) {
+    .card-parent{
+     
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    
+}
+
+
+@media (max-width:450px){
+
+    .card-parent{
+     
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+
+    
+} 
